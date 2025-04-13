@@ -9,3 +9,6 @@ migrations/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+
+# 环境配置
+.env
