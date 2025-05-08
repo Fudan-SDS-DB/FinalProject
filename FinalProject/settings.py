@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "adoption",
 ]
 
 MIDDLEWARE = [
@@ -80,15 +81,15 @@ WSGI_APPLICATION = "FinalProject.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DB_NAME'),        # 从环境变量获取数据库名
-        'USER': env('DB_USER'),        # 从环境变量获取用户名
-        'PASSWORD': env('DB_PASSWORD'),# 从环境变量获取密码
-        'HOST': env('DB_HOST', default='localhost'),
-        'PORT': env('DB_PORT', default='3306'),
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": env("DB_NAME"),  # 从环境变量获取数据库名
+        "USER": env("DB_USER"),  # 从环境变量获取用户名
+        "PASSWORD": env("DB_PASSWORD"),  # 从环境变量获取密码
+        "HOST": env("DB_HOST", default="localhost"),
+        "PORT": env("DB_PORT", default="3306"),
+        "OPTIONS": {
+            "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
 }
